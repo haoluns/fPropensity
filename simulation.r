@@ -1,8 +1,10 @@
 rm(list=ls())
 library(locpol)
 library(MASS)
-
-
+source("fPropensity.r")
+library(fdapace)
+library(glmnet)
+library(survey)
 
 
 
