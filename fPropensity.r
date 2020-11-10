@@ -153,7 +153,7 @@ seq(0,1,by=0.01)
 
 
 library(fdapace)
-res_pace<- FPCA(observed, timepoints,list(dataType='Dense',error=TRUE, kernel='epan', verbose=TRUE,methodBwCov="GCV",methodBwMu="GCV",nRegGrid=101))
+res_pace<- FPCA(observed, timepoints,list(dataType='Dense',error=TRUE, kernel='epan', verbose=TRUE,methodBwCov="GCV",methodBwMu="GCV",nRegGrid=101,useBinnedData="OFF"))
 
 selectedK=min(20,dim(res_pace$phi)[2] )
 covarmat = cbind(res_pace$xiEst[,1:selectedK],Z,rep(1,n))
